@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+}
+#main{
+    display:grid;
+    grid-template-areas: "header header header"
+                         "nav nav aside"
+                         "section section aside"
+                         "footer footer footer";
+    grid-auto-rows: 50px 70px 400px 100px;
+    grid-column-gap: 10px;
+}
+header{
+    grid-area: header;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+header a{
+    color: white;
+    font-size: 20pt;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header a:nth-child(4){
+    color: aqua;
+}
+header a:hover{
+    font-size: 24pt;
+    color:black;
+    font-weight:bold;
+    transition: 1s;
+}
+nav{
+    grid-area: nav;
+    background-color: red;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+nav h1{
+    color:white;
+    font-size: 25pt;
+
+}
+aside{
+    grid-area: aside;
+    background-color: darkgreen;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+aside p{
+    width:150px;
+    color:white;
+    font-size:10pt;
+}
+aside h2{
+    font-size:16pt;
+}
+section{
+    grid-area: section;
+    display:flex;
+}
+section img{
+    width: 45%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    justify-content: space-evenly;
+}
+footer{
+    grid-area: footer;
+    background-color:grey; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+footer div{
+    width: 190px;
+    background-color: coral;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+}
+footer img{
+    width: 40px;
+    height: auto;
+}
